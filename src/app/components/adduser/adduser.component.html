@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agragar Usuarios</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Inicio</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    
+    <!--Main Content-->
+    <div class="my-5">
+      <div class="mx-auto w-25 " style="max-width:100%;">
+        <h2 class="text-center mb-3">Agregar Usuarios</h2>
+        <form [formGroup]="form" (ngSubmit)="submit()">
+          <!--name-->
+          <div class="row">
+            <div class="col-md-12 form-group mb-3">
+              <label for="name" class="form-label">Nombre</label>
+              <input id="name"  formControlName="name" type="text" name="name" class="form-control" placeholder="Nombre" required>
+            </div>
+          </div>
+
+          <!--Email-->
+          <div class="row">
+            <div class="col-md-12 form-group mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input id="email" type="email"  formControlName="email" name="email" class="form-control" placeholder="example@example.com" required>
+            </div>
+          </div>
+          
+          <!--PNo-->
+          <div class="row">
+            <div class="col-md-12 form-group mb-3">
+              <label for="pNo" class="form-label">Numero de Telefono </label>
+              <input id="pNo" type="text" name="pNo"  formControlName="pNo" class="form-control" placeholder="317182718" required>
+            </div>
+          </div>
+         
+          <!--PNo-->
+          <div class="row">
+            <div class="col-md-12 form-group mb-3">
+              <label for="Adress" class="form-label">Dirección</label>
+              <textarea id="Adress" type="text" name="adress"  formControlName="adress" class="form-control" placeholder="cll 12 # 28- 09, B/..." rows="3" required></textarea>
+            </div>
+          </div>
+         
+          <div class="row">
+            <div class="col-md-12 form-group">
+              <input [disabled]="!form.valid" class="btn btn-primary w-100" type="submit" value="Guardar">
+            </div>
+          </div>
+
+          <div>
+            
+          </div>
+        </form>
+      </div>
+    </div>
+</body>
+</html>
